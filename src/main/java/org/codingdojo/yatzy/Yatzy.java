@@ -37,16 +37,9 @@ public class Yatzy {
         dice[4] = _5;
     }
 
-    public int fours()
+    public static int fours(int[] dice)
     {
-        int sum;    
-        sum = 0;
-        for (int at = 0; at != 5; at++) {
-            if (dice[at] == 4) {
-                sum += 4;
-            }
-        }
-        return sum;
+        return Arrays.stream(dice).filter(d -> d == 4).sum();
     }
 
     public int fives()
