@@ -37,8 +37,7 @@ public class Yatzy {
         dice[4] = _5;
     }
 
-    public static int fours(int[] dice)
-    {
+    public static int fours(int[] dice) {
         return Arrays.stream(dice).filter(d -> d == 4).sum();
     }
 

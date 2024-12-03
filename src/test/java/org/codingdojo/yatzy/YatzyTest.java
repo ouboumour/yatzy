@@ -42,8 +42,7 @@ public class YatzyTest {
     }
 
     @Test
-    public void fours_test() 
-    {
+    public void givenDice_whenFours_thenReturnFoursSum() {
         assertEquals(12, Yatzy.fours(new int[]{4,4,4,5,5}));
         assertEquals(8, Yatzy.fours(new int[]{4,4,5,5,5}));
         assertEquals(4, Yatzy.fours(new int[]{4,5,5,5,5}));
