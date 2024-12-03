@@ -13,7 +13,7 @@ public class Yatzy {
     }
 
     public static int ones(int[] dice) {
-        return (int) Arrays.stream(dice).filter(d -> d == 1).count();
+        return Arrays.stream(dice).filter(d -> d == 1).sum();
     }
 
     public static int twos(int[] dice) {
