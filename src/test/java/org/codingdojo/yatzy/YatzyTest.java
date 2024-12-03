@@ -14,10 +14,8 @@ public class YatzyTest {
         assertEquals(16, Yatzy.chance(new int[]{3,3,4,5,1}));
     }
 
-    @Test public void yatzy_scores_50() {
-        int expected = 50;
-        int actual = Yatzy.yatzy(new int[] {4,4,4,4,4});
-        assertEquals(expected, actual);
+    @Test public void givenDice_whenYatzy_thenReturnFiftyIfAllMatchElseZero() {
+        assertEquals(50, Yatzy.yatzy(new int[] {4,4,4,4,4}));
         assertEquals(50, Yatzy.yatzy(new int[]{6,6,6,6,6}));
         assertEquals(0, Yatzy.yatzy(new int[]{6,6,6,6,3}));
     }
