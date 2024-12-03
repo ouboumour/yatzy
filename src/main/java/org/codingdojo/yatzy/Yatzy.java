@@ -4,8 +4,7 @@ import java.util.Arrays;
 
 public class Yatzy {
 
-    public static int chance(int[] dice)
-    {
+    public static int chance(int[] dice) {
         return Arrays.stream(dice).sum();
     }
 
