@@ -49,10 +49,10 @@ public class YatzyTest {
     }
 
     @Test
-    public void fives() {
-        assertEquals(10, new Yatzy(4,4,4,5,5).fives());
-        assertEquals(15, new Yatzy(4,4,5,5,5).fives());
-        assertEquals(20, new Yatzy(4,5,5,5,5).fives());
+    public void givenDice_whenFives_thenReturnFivesSum() {
+        assertEquals(10, Yatzy.fives(new int[]{4,4,4,5,5}));
+        assertEquals(15, Yatzy.fives(new int[]{4,4,5,5,5}));
+        assertEquals(20, Yatzy.fives(new int[]{4,5,5,5,5}));
     }
 
     @Test
