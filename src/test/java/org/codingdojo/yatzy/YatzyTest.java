@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 public class YatzyTest {
 
     @Test
-    public void chance_scores_sum_of_all_dice() {
+    public void givenDice_whenChance_thenReturnTheSum() {
         assertEquals(15, Yatzy.chance(new int[]{2,3,4,5,1}));
         assertEquals(16, Yatzy.chance(new int[]{3,3,4,5,1}));
     }
