@@ -3,6 +3,7 @@ package org.codingdojo.yatzy;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 public class Yatzy {
@@ -91,22 +92,12 @@ public class Yatzy {
                 .orElse(0);
     }
 
-    public static int smallStraight(int d1, int d2, int d3, int d4, int d5)
-    {
-        int[] tallies;
-        tallies = new int[6];
-        tallies[d1-1] += 1;
-        tallies[d2-1] += 1;
-        tallies[d3-1] += 1;
-        tallies[d4-1] += 1;
-        tallies[d5-1] += 1;
-        if (tallies[0] == 1 &&
-            tallies[1] == 1 &&
-            tallies[2] == 1 &&
-            tallies[3] == 1 &&
-            tallies[4] == 1)
-            return 15;
-        return 0;
+    public static int smallStraight(int[] dice) {
+        return IntStream
+                .of(dice)
+                .sorted()
+                .mapToObj(String::valueOf)
+                .collect(Collectors.joining()).equals("12345") ? 15 : 0;
     }
 
     public static int largeStraight(int d1, int d2, int d3, int d4, int d5)
