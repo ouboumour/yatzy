@@ -3,7 +3,6 @@ package org.codingdojo.yatzy;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 public class YatzyTest {
@@ -70,9 +69,9 @@ public class YatzyTest {
     }
 
     @Test
-    public void two_Pair() {
-        assertEquals(16, Yatzy.two_pair(3,3,5,4,5));
-        assertEquals(16, Yatzy.two_pair(3,3,5,5,5));
+    public void givenDice_whenTwoPair_thenReturnTwoPairsSum() {
+        assertEquals(16, Yatzy.twoPair(new int[]{3,3,5,4,5}));
+        assertEquals(16, Yatzy.twoPair(new int[]{3,3,5,5,5}));
     }
 
     @Test
