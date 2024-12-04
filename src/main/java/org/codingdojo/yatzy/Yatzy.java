@@ -29,19 +29,6 @@ public class Yatzy {
         return Arrays.stream(dice).filter(d -> d == 3).sum();
     }
 
-    protected int[] dice;
-    public Yatzy() {}
-    public Yatzy(int d1, int d2, int d3, int d4, int _5)
-    {
-        this();
-        dice = new int[5];
-        dice[0] = d1;
-        dice[1] = d2;
-        dice[2] = d3;
-        dice[3] = d4;
-        dice[4] = _5;
-    }
-
     public static int fours(int[] dice) {
         return Arrays.stream(dice).filter(d -> d == 4).sum();
     }
@@ -117,7 +104,5 @@ public class Yatzy {
                 .mapToInt(Integer::intValue)
                 .sum();
     }
+
 }
-
-
-
