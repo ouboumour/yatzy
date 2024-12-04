@@ -96,10 +96,10 @@ public class YatzyTest {
     }
 
     @Test
-    public void largeStraight() {
-        assertEquals(20, Yatzy.largeStraight(6,2,3,4,5));
-        assertEquals(20, Yatzy.largeStraight(2,3,4,5,6));
-        assertEquals(0, Yatzy.largeStraight(1,2,2,4,5));
+    public void givenDice_whenLargeStraight_thenReturnTwentyElseZero() {
+        assertEquals(20, Yatzy.largeStraight(new int[]{6,2,3,4,5}));
+        assertEquals(20, Yatzy.largeStraight(new int[]{2,3,4,5,6}));
+        assertEquals(0, Yatzy.largeStraight(new int[]{1,2,2,4,5}));
     }
 
     @Test
