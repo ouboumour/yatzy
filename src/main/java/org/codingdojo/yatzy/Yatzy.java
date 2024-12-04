@@ -1,10 +1,9 @@
 package org.codingdojo.yatzy;
 
-import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 public class Yatzy {
 
@@ -53,8 +52,7 @@ public class Yatzy {
         return Arrays.stream(dice).filter(d -> d == 6).sum();
     }
 
-    public static int score_pair(int[] dice)
-    {
+    public static int onePair(int[] dice) {
         return 2*IntStream
                 .of(dice)
                 .distinct()

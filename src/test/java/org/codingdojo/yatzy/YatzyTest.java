@@ -63,10 +63,10 @@ public class YatzyTest {
     }
 
     @Test
-    public void one_pair() {
-        assertEquals(6, Yatzy.score_pair(new int[]{3,4,3,5,6}));
-        assertEquals(10, Yatzy.score_pair(new int[]{5,3,3,3,5}));
-        assertEquals(12, Yatzy.score_pair(new int[]{5,3,6,6,5}));
+    public void givenDice_whenOnePair_thenReturnOnePairsSum() {
+        assertEquals(6, Yatzy.onePair(new int[]{3,4,3,5,6}));
+        assertEquals(10, Yatzy.onePair(new int[]{5,3,3,3,5}));
+        assertEquals(12, Yatzy.onePair(new int[]{5,3,6,6,5}));
     }
 
     @Test
