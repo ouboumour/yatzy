@@ -82,19 +82,13 @@ public class Yatzy {
                 .orElse(0);
     }
 
-    public static int four_of_a_kind(int _1, int _2, int d3, int d4, int d5)
-    {
-        int[] tallies;
-        tallies = new int[6];
-        tallies[_1-1]++;
-        tallies[_2-1]++;
-        tallies[d3-1]++;
-        tallies[d4-1]++;
-        tallies[d5-1]++;
-        for (int i = 0; i < 6; i++)
-            if (tallies[i] >= 4)
-                return (i+1) * 4;
-        return 0;
+    public static int fourOfAKind(int[] dice) {
+        return 4*IntStream
+                .of(dice)
+                .distinct()
+                .filter(d -> Collections.frequency(IntStream.of(dice).boxed().toList(), d) >= 4)
+                .findFirst()
+                .orElse(0);
     }
 
     public static int smallStraight(int d1, int d2, int d3, int d4, int d5)
