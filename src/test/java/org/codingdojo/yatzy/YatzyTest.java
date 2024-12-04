@@ -75,18 +75,17 @@ public class YatzyTest {
     }
 
     @Test
-    public void three_of_a_kind() 
-    {
-        assertEquals(9, Yatzy.three_of_a_kind(3,3,3,4,5));
-        assertEquals(15, Yatzy.three_of_a_kind(5,3,5,4,5));
-        assertEquals(9, Yatzy.three_of_a_kind(3,3,3,3,5));
+    public void givenDice_whenThreeOfAKind_thenReturnThreeOfAKindSum() {
+        assertEquals(9, Yatzy.threeOfAKind(new int[]{3,3,3,4,5}));
+        assertEquals(15, Yatzy.threeOfAKind(new int[]{5,3,5,4,5}));
+        assertEquals(9, Yatzy.threeOfAKind(new int[]{3,3,3,3,5}));
+        assertEquals(9, Yatzy.threeOfAKind(new int[]{3,3,3,3,3}));
     }
 
     @Test
     public void four_of_a_knd() {
         assertEquals(12, Yatzy.four_of_a_kind(3,3,3,3,5));
         assertEquals(20, Yatzy.four_of_a_kind(5,5,5,4,5));
-        assertEquals(9, Yatzy.three_of_a_kind(3,3,3,3,3));
     }
 
     @Test
