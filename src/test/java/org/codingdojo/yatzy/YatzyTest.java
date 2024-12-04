@@ -89,7 +89,7 @@ public class YatzyTest {
     }
 
     @Test
-    public void smallStraight() {
+    public void givenDice_whenSmallStraight_thenReturnFifteenElseZero() {
         assertEquals(15, Yatzy.smallStraight(new int[]{1,2,3,4,5}));
         assertEquals(15, Yatzy.smallStraight(new int[]{2,3,4,5,1}));
         assertEquals(0, Yatzy.smallStraight(new int[]{1,2,2,4,5}));
