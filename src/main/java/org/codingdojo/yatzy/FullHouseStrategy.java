@@ -4,9 +4,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.IntStream;
 
-public class Yatzy {
+public class FullHouseStrategy implements CategoryStrategy {
 
-    public static int fullHouse(int[] dice) {
+    @Override
+    public int score(int[] dice) {
         return IntStream
                 .of(dice)
                 .filter(d -> List.of(2, 3).contains(Collections.frequency(IntStream.of(dice).boxed().toList(), d)))
