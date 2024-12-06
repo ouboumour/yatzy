@@ -7,28 +7,6 @@ import java.util.stream.IntStream;
 
 public class Yatzy {
 
-    public static int onePair(int[] dice) {
-        return 2*IntStream
-                .of(dice)
-                .distinct()
-                .filter(d -> Collections.frequency(IntStream.of(dice).boxed().toList(), d) >= 2)
-                .max()
-                .orElse(0);
-    }
-
-    public static int twoPair(int[] dice) {
-        int firstPair = onePair(dice)/2;
-        if (firstPair == 0) return 0;
-
-        return 2*IntStream
-                .of(dice)
-                .distinct()
-                .filter(d -> d != firstPair && Collections.frequency(IntStream.of(dice).boxed().toList(), d) >= 2)
-                .map(secondPair -> secondPair + firstPair)
-                .findFirst()
-                .orElse(0);
-    }
-
     public static int threeOfAKind(int[] dice) {
         return 3*IntStream
                 .of(dice)
