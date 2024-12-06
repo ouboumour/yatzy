@@ -2,6 +2,8 @@ package org.codingdojo.yatzy;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FullHouseStrategyTest {
@@ -14,8 +16,8 @@ public class FullHouseStrategyTest {
 
     @Test
     public void givenDice_whenFullHouse_thenReturnTheSum() {
-        assertEquals(18, categoryStrategy.score(new int[]{6,2,2,2,6}));
-        assertEquals(0, categoryStrategy.score(new int[]{2,3,4,5,6}));
+        assertEquals(18, categoryStrategy.score(List.of(6,2,2,2,6)));
+        assertEquals(0, categoryStrategy.score(List.of(2,3,4,5,6)));
     }
 
 }

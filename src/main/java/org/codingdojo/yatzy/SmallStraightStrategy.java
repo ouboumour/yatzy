@@ -1,16 +1,16 @@
 package org.codingdojo.yatzy;
 
+import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class SmallStraightStrategy implements CategoryStrategy {
 
     @Override
-    public int score(int[] dice) {
-        return IntStream
-                .of(dice)
+    public int score(List<Integer> dice) {
+        return dice
+                .stream()
                 .sorted()
-                .mapToObj(String::valueOf)
+                .map(String::valueOf)
                 .collect(Collectors.joining()).equals("12345") ? 15 : 0;
     }
 

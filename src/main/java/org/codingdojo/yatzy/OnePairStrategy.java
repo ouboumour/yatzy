@@ -1,17 +1,17 @@
 package org.codingdojo.yatzy;
 
 import java.util.Collections;
-import java.util.stream.IntStream;
+import java.util.List;
 
 public class OnePairStrategy implements CategoryStrategy {
 
     @Override
-    public int score(int[] dice) {
-        return 2* IntStream
-                .of(dice)
+    public int score(List<Integer> dice) {
+        return 2* dice
+                .stream()
                 .distinct()
-                .filter(d -> Collections.frequency(IntStream.of(dice).boxed().toList(), d) >= 2)
-                .max()
+                .filter(d -> Collections.frequency(dice, d) >= 2)
+                .reduce(Integer::max)
                 .orElse(0);
     }
 

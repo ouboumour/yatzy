@@ -1,7 +1,9 @@
 package org.codingdojo.yatzy;
 
+import java.util.List;
+
 public interface CategoryStrategy {
 
-    int score(int[] dice);
+    int score(List<Integer> dice);
 
 }
