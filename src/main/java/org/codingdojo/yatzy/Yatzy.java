@@ -1,8 +1,6 @@
 package org.codingdojo.yatzy;
 
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -10,35 +8,35 @@ import java.util.stream.IntStream;
 public class Yatzy {
 
     public static int chance(int[] dice) {
-        return Arrays.stream(dice).sum();
+        return IntStream.of(dice).sum();
     }
 
     public static int yatzy(int[] dice) {
-        return Arrays.stream(dice).distinct().count() == 1 ? 50 : 0;
+        return IntStream.of(dice).distinct().count() == 1 ? 50 : 0;
     }
 
     public static int ones(int[] dice) {
-        return Arrays.stream(dice).filter(d -> d == 1).sum();
+        return IntStream.of(dice).filter(d -> d == 1).sum();
     }
 
     public static int twos(int[] dice) {
-        return Arrays.stream(dice).filter(d -> d == 2).sum();
+        return IntStream.of(dice).filter(d -> d == 2).sum();
     }
 
     public static int threes(int[] dice) {
-        return Arrays.stream(dice).filter(d -> d == 3).sum();
+        return IntStream.of(dice).filter(d -> d == 3).sum();
     }
 
     public static int fours(int[] dice) {
-        return Arrays.stream(dice).filter(d -> d == 4).sum();
+        return IntStream.of(dice).filter(d -> d == 4).sum();
     }
 
     public static int fives(int[] dice) {
-        return Arrays.stream(dice).filter(d -> d == 5).sum();
+        return IntStream.of(dice).filter(d -> d == 5).sum();
     }
 
     public static int sixes(int[] dice) {
-        return Arrays.stream(dice).filter(d -> d == 6).sum();
+        return IntStream.of(dice).filter(d -> d == 6).sum();
     }
 
     public static int onePair(int[] dice) {
