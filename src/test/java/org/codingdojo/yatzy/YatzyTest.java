@@ -7,13 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class YatzyTest {
 
     @Test
-    public void givenDice_whenSixes_thenReturnSixesSum() {
-        assertEquals(0, Yatzy.sixes(new int[]{4,4,4,5,5}));
-        assertEquals(6, Yatzy.sixes(new int[]{4,4,6,5,5}));
-        assertEquals(18, Yatzy.sixes(new int[]{6,5,6,6,5}));
-    }
-
-    @Test
     public void givenDice_whenOnePair_thenReturnOnePairsSum() {
         assertEquals(6, Yatzy.onePair(new int[]{3,4,3,5,6}));
         assertEquals(10, Yatzy.onePair(new int[]{5,3,3,3,5}));
