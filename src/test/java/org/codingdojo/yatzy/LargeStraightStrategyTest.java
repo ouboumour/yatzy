@@ -21,5 +21,4 @@ public class LargeStraightStrategyTest {
         assertEquals(0, categoryStrategy.score(List.of(1,2,2,4,5)));
     }
 
-
 }

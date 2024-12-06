@@ -1,5 +1,6 @@
-package org.codingdojo.yatzy;
+package org.codingdojo.yatzy.numberstrategies;
 
+import org.codingdojo.yatzy.CategoryStrategy;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -20,4 +21,5 @@ public class FivesStrategyTest {
         assertEquals(15, categoryStrategy.score(List.of(4,4,5,5,5)));
         assertEquals(20, categoryStrategy.score(List.of(4,5,5,5,5)));
     }
+
 }
