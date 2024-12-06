@@ -1,5 +1,7 @@
 package org.codingdojo.yatzy;
 
+import org.codingdojo.yatzy.numberofkindstrategies.OnePairStrategy;
+
 import java.util.Collections;
 import java.util.List;
 

@@ -1,5 +1,6 @@
-package org.codingdojo.yatzy;
+package org.codingdojo.yatzy.numberofkindstrategies;
 
+import org.codingdojo.yatzy.CategoryStrategy;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
