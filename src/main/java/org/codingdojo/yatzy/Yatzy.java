@@ -7,10 +7,6 @@ import java.util.stream.IntStream;
 
 public class Yatzy {
 
-    public static int yatzy(int[] dice) {
-        return IntStream.of(dice).distinct().count() == 1 ? 50 : 0;
-    }
-
     public static int ones(int[] dice) {
         return IntStream.of(dice).filter(d -> d == 1).sum();
     }
