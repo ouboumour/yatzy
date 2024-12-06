@@ -7,15 +7,6 @@ import java.util.stream.IntStream;
 
 public class Yatzy {
 
-    public static int fourOfAKind(int[] dice) {
-        return 4*IntStream
-                .of(dice)
-                .distinct()
-                .filter(d -> Collections.frequency(IntStream.of(dice).boxed().toList(), d) >= 4)
-                .findFirst()
-                .orElse(0);
-    }
-
     public static int smallStraight(int[] dice) {
         return IntStream
                 .of(dice)
