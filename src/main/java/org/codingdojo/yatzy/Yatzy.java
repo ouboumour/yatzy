@@ -7,14 +7,6 @@ import java.util.stream.IntStream;
 
 public class Yatzy {
 
-    public static int smallStraight(int[] dice) {
-        return IntStream
-                .of(dice)
-                .sorted()
-                .mapToObj(String::valueOf)
-                .collect(Collectors.joining()).equals("12345") ? 15 : 0;
-    }
-
     public static int largeStraight(int[] dice) {
         return IntStream
                 .of(dice)

@@ -7,13 +7,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class YatzyTest {
 
     @Test
-    public void givenDice_whenSmallStraight_thenReturnFifteenElseZero() {
-        assertEquals(15, Yatzy.smallStraight(new int[]{1,2,3,4,5}));
-        assertEquals(15, Yatzy.smallStraight(new int[]{2,3,4,5,1}));
-        assertEquals(0, Yatzy.smallStraight(new int[]{1,2,2,4,5}));
-    }
-
-    @Test
     public void givenDice_whenLargeStraight_thenReturnTwentyElseZero() {
         assertEquals(20, Yatzy.largeStraight(new int[]{6,2,3,4,5}));
         assertEquals(20, Yatzy.largeStraight(new int[]{2,3,4,5,6}));
